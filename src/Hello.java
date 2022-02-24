@@ -8,15 +8,26 @@ public class Hello {
     public static void main(String[] args) {
 
         System.out.println("Hello World " + args[0]);
+        Car myCar;
+        myCar = new Car();
+        myCar.setPrice(20_000_000);
+        System.out.println(myCar.getPrice());
+        System.out.println(myCar.model);
 
-        JFrame jFrame = new JFrame("321");
-        jFrame.setSize(800, 600);
-
-        JTextPane jTextPane = new JTextPane();
-        jTextPane.setText("123");
-
-        jFrame.add(jTextPane);
-
-        jFrame.setVisible(true);
     }
+}
+
+class Car {
+
+    int price = 1000;
+    String model = "BMW X6";
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int newPrice) {
+        price = newPrice;
+    }
+
 }
